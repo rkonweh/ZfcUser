@@ -4,11 +4,11 @@ namespace ZfcUser\Authentication\Storage;
 
 use Zend\Authentication\Storage;
 use Zend\Authentication\Storage\StorageInterface;
-use Zend\ServiceManager\ServiceManagerAwareInterface;
-use Zend\ServiceManager\ServiceManager;
+// use Zend\ServiceManager\ServiceManagerAwareInterface;
+// use Zend\ServiceManager\ServiceManager;
 use ZfcUser\Mapper\UserInterface as UserMapper;
 
-class Db implements Storage\StorageInterface, ServiceManagerAwareInterface
+class Db implements Storage\StorageInterface
 {
     /**
      * @var StorageInterface
@@ -138,9 +138,9 @@ class Db implements Storage\StorageInterface, ServiceManagerAwareInterface
      */
     public function getMapper()
     {
-        if (null === $this->mapper) {
-            $this->mapper = $this->getServiceManager()->get('zfcuser_user_mapper');
-        }
+        // if (null === $this->mapper) {
+        //     $this->mapper = $this->getServiceManager()->get('zfcuser_user_mapper');
+        // }
         return $this->mapper;
     }
 
